@@ -1,0 +1,86 @@
+*, *::before, *::after {
+	margin:0;
+	padding:0;
+	transition: all .1s;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	position: absolute;
+	top: 1em;
+	margin: 0 auto;
+}
+
+.google-logo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border-top: 50px solid black;
+	border-right: 50px solid black;
+	border-left: 50px solid black;
+	border-bottom: 50px solid black;
+}
+.google-logo::before {
+	content: '';
+	position: absolute;
+	top: -155px;
+	right: -155px;
+	border-top: 100px solid transparent;
+	border-right: 100px solid #fff;
+	border-bottom: 100px solid transparent;
+	border-left: 100px solid transparent;
+	transform: rotate(90deg);
+	border-radius: 0 50% 0 0 
+}
+
+.google-logo::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -50px;
+	width: 100px;
+	height: 50px;
+	background: black;
+	transform: translate( -5px, -20px);
+}
+
+.google-border {
+	padding: 200px;
+	border-top: 10px solid black;
+	border-right: 10px solid black;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.google-border:hover {
+	border-top: 10px solid #db3236;
+	border-right: 10px solid #4885ed;
+	border-left: 10px solid #f4c20d;
+	border-bottom: 10px solid #3cba54;
+}
+
+.google-border:hover .google-logo {
+	border-top: 50px solid #db3236;
+	border-right: 50px solid #4885ed;
+	border-left: 50px solid #f4c20d;
+	border-bottom: 50px solid #3cba54;
+}
+
+.google-border:hover .google-logo::after {
+	background: #4885ed;
+}
+
+.google-border {
+	transform: scale(1);
+}
